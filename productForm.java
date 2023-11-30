@@ -370,7 +370,7 @@ public class productForm extends businessLogic {
 
         try {
             Connect();
-            getpId();
+            gProdId();
             pId.removeAllItems();
             while (rs.next()) {
                 pId.addItem(rs.getString(1));
@@ -387,7 +387,7 @@ public class productForm extends businessLogic {
 
         try {
             Connect();
-            getuId();
+            gUserId();
             uId.removeAllItems();
             while (rs.next()) {
                 uId.addItem(rs.getString(1));
