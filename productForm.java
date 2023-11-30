@@ -14,7 +14,7 @@ public class productForm extends businessLogic {
         loadUsersAndIds();
     }
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -364,7 +364,7 @@ public class productForm extends businessLogic {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
     //Loading products and users is the only business logic we merged because we can't seprate them
     public void loadProductsAndIds() {
 
@@ -375,7 +375,7 @@ public class productForm extends businessLogic {
             while (rs.next()) {
                 pId.addItem(rs.getString(1));
             }
-            dbpRead(jTable1);
+            pRead(jTable1);
         } catch (SQLException ex) {
             Logger.getLogger(productForm.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -392,7 +392,7 @@ public class productForm extends businessLogic {
             while (rs.next()) {
                 uId.addItem(rs.getString(1));
             }
-            dbuRead(jTable2);
+            uRead(jTable2);
         } catch (SQLException ex) {
             Logger.getLogger(productForm.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -400,7 +400,7 @@ public class productForm extends businessLogic {
     }
     
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {                                          
         //Creating Products Button
         String pname = pName.getText();
         String price = pPrice.getText();
@@ -413,24 +413,24 @@ public class productForm extends businessLogic {
             pPrice.setText("");
             pQtyy.setText("");
             pDescription.setText("");
-            dbpRead(jTable1);
+            pRead(jTable1);
             loadProductsAndIds();
 
         } else {
             JOptionPane.showMessageDialog(this, "Error!");
         }
 
-    }//GEN-LAST:event_btnCreateActionPerformed
+    }                                         
 
-    private void pIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pIdActionPerformed
+    private void pIdActionPerformed(java.awt.event.ActionEvent evt) {                                    
 
-    }//GEN-LAST:event_pIdActionPerformed
+    }                                   
 
-    private void pPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pPriceActionPerformed
+    private void pPriceActionPerformed(java.awt.event.ActionEvent evt) {                                       
 
-    }//GEN-LAST:event_pPriceActionPerformed
+    }                                      
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                          
         //Updating Products Button
         String name = pName.getText();
         String price = pPrice.getText();
@@ -445,14 +445,14 @@ public class productForm extends businessLogic {
             pQtyy.setText("");
             pDescription.setText("");
             pName.requestFocus();
-            dbpRead(jTable1);
+            pRead(jTable1);
             loadProductsAndIds();
         } else {
             JOptionPane.showMessageDialog(this, "Error!");
         }
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    }                                         
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                          
         //Deleting Products Button
         String id = pId.getSelectedItem().toString();
         pDelete(id);
@@ -463,19 +463,19 @@ public class productForm extends businessLogic {
             pQtyy.setText("");
             pDescription.setText("");
             pName.requestFocus();
-            dbpRead(jTable1);
+            pRead(jTable1);
             loadProductsAndIds();
 
         } else {
             JOptionPane.showMessageDialog(this, "Error!");
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }                                         
 
-    private void pNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pNameActionPerformed
+    private void pNameActionPerformed(java.awt.event.ActionEvent evt) {                                      
        
-    }//GEN-LAST:event_pNameActionPerformed
+    }                                     
 
-    private void createUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserActionPerformed
+    private void createUserActionPerformed(java.awt.event.ActionEvent evt) {                                           
         //Creating Users Button
                                                   
         String uname = uName.getText();
@@ -491,15 +491,15 @@ public class productForm extends businessLogic {
             uEmail.setText("");
             uCC.setText("");
             uAddress.setText("");
-            dbuRead(jTable2);
+            uRead(jTable2);
             loadUsersAndIds();
 
         } else {
             JOptionPane.showMessageDialog(this, "Error!");
         }
-    }//GEN-LAST:event_createUserActionPerformed
+    }                                          
 
-    private void updateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateUserActionPerformed
+    private void updateUserActionPerformed(java.awt.event.ActionEvent evt) {                                           
         //Updating Users Button                 
         String uname = uName.getText();
         String upass = uPass.getText();
@@ -516,14 +516,14 @@ public class productForm extends businessLogic {
             uCC.setText("");
             uAddress.setText("");
             uId.requestFocus();
-            dbuRead(jTable2);
+            uRead(jTable2);
             loadUsersAndIds();
         } else {
             JOptionPane.showMessageDialog(this, "Error!");
         }
-    }//GEN-LAST:event_updateUserActionPerformed
+    }                                          
 
-    private void deleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteUserActionPerformed
+    private void deleteUserActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // Deleting Users Button:
 
         String uid = uId.getSelectedItem().toString();
@@ -536,30 +536,31 @@ public class productForm extends businessLogic {
             uCC.setText("");
             uAddress.setText("");
             uName.requestFocus();
-            dbuRead(jTable2);
+            uRead(jTable2);
             loadUsersAndIds();
 
         } else {
             JOptionPane.showMessageDialog(this, "Error!");
         }                                      
-    }//GEN-LAST:event_deleteUserActionPerformed
+    }                                          
 
-    private void uEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uEmailActionPerformed
+    private void uEmailActionPerformed(java.awt.event.ActionEvent evt) {                                       
     
-    }//GEN-LAST:event_uEmailActionPerformed
+    }                                      
 
     public static void main(String args[]) {
-        //load the form and connect to the database
+        //connect to the database and load the form
+        Connect();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new productForm().setVisible(true);
-                Connect();
+                
             }
         });
     }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btnCreate;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnUpdate;
@@ -597,5 +598,5 @@ public class productForm extends businessLogic {
     private javax.swing.JTextField uName;
     private javax.swing.JTextField uPass;
     private javax.swing.JButton updateUser;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
