@@ -17,4 +17,10 @@ public class businessLogic extends dbAccess{
     public void uDelete(String uid){
         dbuDelete(uid);
     }
+    public void gProdId(){
+        getpId();
+    }
+    public void gUserId(){
+        getuId();
+    }
 }
